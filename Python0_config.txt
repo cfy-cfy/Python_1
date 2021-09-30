@@ -1,0 +1,123 @@
+【0】—————————————————————————————————————————————————— 更改jupyter notebook 默认位置
+
+1——更改配置文件：C:\Users\hp\.jupyter\jupyter_notebook_config.py
+2——更默认路径：c.NotebookApp.notebook_dir = 'G:\\Development\\【0】Python\\【0】Jupyter Notebook_Python'
+3——找到jupyter notebook的文件位置，右键-属性，更改两处：
+
+1）删掉目标中的"%USERPROFILE%/"；
+H:\Anacando\python.exe H:\Anacando\cwp.py H:\Anacando H:\Anacando\python.exe H:\Anacando\Scripts\jupyter-notebook-script.py "%USERPROFILE%/"
+
+2）起始位置 %HOMEPATH% 改为你要安放存储文件的路径。 G:\Development\【0】Python\【0】Jupyter Notebook_Python
+
+【1】——————————————————————————————————————————————————
+Windows系统（镜像地址）：
+
+清华大学：https://pypi.tuna.tsinghua.edu.cn/simple 清华大学的pip源是官网pypi的镜像，每隔5分钟同步一次，重点推荐！！！
+阿里云：http://mirrors.aliyun.com/pypi/simple/
+
+（1）永久更改：
+直接在user目录中创建一个pip目录，如：C:\Users\xx\pip，并新建文件pip.ini文件，
+
+pip文件内容如下：
+[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+[install]
+trusted-host=http://mirrors.aliyun.com
+
+这里要先建一个文件夹pip，然后新建一个txt文件，输入上面内容，保存，更改名称和扩展名。
+
+（2）临时更改：
+
+临时使用镜像地址在使用pip的时候加参数 -i https://pypi.tuna.tsinghua.edu.cn/simple
+例如：pip install -i https://pypi.tuna.tsinghua.edu.cn/flask，这样就可以从清华的镜像下载安装falsk。
+
+
+	pip install flask -i https://pypi.tuna.tsinghua.edu.cn
+【2】——————————————————————————————————————————————————
+
+pypi 镜像使用帮助
+pypi 镜像每 5 分钟同步一次。
+
+临时使用
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
+注意，simple 不能少, 是 https 而不是 http
+
+设为默认
+升级 pip 到最新的版本 (>=10.0.0) 后进行配置：
+
+pip install pip -U
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+如果您到 pip 默认源的网络连接较差，临时使用本镜像站来升级 pip：
+
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U
+【3】——————————————————————————————————————————————————
+Anaconda 镜像使用帮助： 清华大学开源软件镜像站
+https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/
+
+
+channels:
+  - defaults
+show_channel_urls: true
+default_channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+
+【4】——————————————————————————————————————————————————
+1.查看channel
+conda config --show#显示出所有conda的config信息
+conda config --show channels#只显示channels的信息
+
+2.删除channel
+conda config –remove channels
+https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+
+3.增加channel
+conda config ‐‐add channels 
+https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+
+4.查看channel优先级
+conda config --get channels
+
+5.查看.condarc文件位置
+conda info
+
+6.安装时显示安装包来源
+conda config --set show_channel_urls yes
+
+7.安装时确认[y/n]
+conda config --set always_yes false #安装确认中，不默认yes，自己决定
+
+8.查看conda版本
+conda -V/--version
+
+9.显示所有虚拟环境
+conda info -e
+conda info --envs
+
+10.新建虚拟环境
+conda create --name yourname python=3.6
+
+111.删除环境
+conda remove -n yourname --all
+
+12.复制环境
+conda create -n newpy36 --clone py36
+
+13.指定网址安装包
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple opencv-python
+
+114.删除包
+conda remove package_name
+
+15.更新包
+conda update package_name
+conda update --all#更新环境中的所有包
+conda config --remove-key channels
