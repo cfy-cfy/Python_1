@@ -8,8 +8,8 @@ Cfy _ Python Learning
  【0】Try Jupyter：在线编程，并且提供各种语言的运行环境     https://jupyter.org/try
       关联（mybinder）
       
- 【1】mybinder：在线编程，并且提供各种语言的运行环境        https://mybinder.org  
-                                                      使用文档：https://mybinder.readthedocs.io/en/latest/index.html#
+ 【1】mybinder：在线编程，并且提供各种语言的运行环境        https://mybinder.org  或者  https://notebooks.gesis.org/binder/
+      关联（google colab ）                            使用文档：https://mybinder.readthedocs.io/en/latest/index.html#
                                                       
  【2】jupyter nbviewer ：在线编辑                       https://nbviewer.jupyter.org/
       关联（google colab ）
