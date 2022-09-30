@@ -4,12 +4,16 @@ Cfy _ Python Learning
 *******************************************
 
  【Jupyter Notebook云端展示平台】
-
- 【1】jupyter nbviewer ：在线编辑                       https://nbviewer.jupyter.org/
-
- 【2】mybinder：在线编程，并且提供各种语言的运行环境        https://mybinder.org  
+ 
+ 【0】Try Jupyter：在线编程，并且提供各种语言的运行环境     https://jupyter.org/try
+      关联（mybinder）
+      
+ 【1】mybinder：在线编程，并且提供各种语言的运行环境        https://mybinder.org  
                                                       使用文档：https://mybinder.readthedocs.io/en/latest/index.html#
-
+                                                      
+ 【2】jupyter nbviewer ：在线编辑                       https://nbviewer.jupyter.org/
+      关联（google colab ）
+ 
  【3】google colab：在线编程，并且提供各种语言的运行环境    https://colab.research.google.com/notebooks/welcome.ipynb
 
  【4】replit：在线编程，并且提供各种语言的运行环境          https://replit.com/
